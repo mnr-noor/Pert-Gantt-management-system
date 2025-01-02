@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import pic from './assets/Time management-cuate.svg';
-import logo from'./assets/logo.png'
+import logo from '../assets/logo.png'
+
 // Import your components for PertChart and GanttChart
 import PertChart from './components/PertChart';
 import GanttChart from './components/GanttChart';
@@ -11,17 +12,17 @@ const HomePage = () => {
     const navigate = useNavigate();
 
     return (
-        <div style={{ padding: '10px',marginLeft:'90px' }}>
+        <div style={{ padding: '20px' }}>
             {/* Navbar with logo on the left */}
-            <nav style={{  backgroundColor: 'white', display: 'flex', alignItems: 'center' }}>
-                <img src={logo} alt="Logo" style={{ width: '120px', height: '120px' }} />
+            <nav style={{ padding: '10px', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center' }}>
+                <img src={logo} alt="Logo" style={{ width: '50px', height: '50px' }} />
             </nav>
 
             {/* Main content */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '70px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '40px' }}>
                 <div>
-                    <h1 style={{ fontSize: '3rem', color: '#3b4e56',fontWeight: 'bold'   }}>PERT AND GANTT Management System</h1>
-                    <p style={{ fontSize: '2em', color: '#555', marginTop:'20px' }}>
+                    <h1 style={{ fontSize: '3em', color: '#007bff' }}>PERT AND GANTT Management System</h1>
+                    <p style={{ fontSize: '1em', color: '#555' }}>
                         This tool allows you to manage projects using PERT and Gantt charts. Choose the chart to get started.
                     </p>
                     <div style={{ marginTop: '20px' }}>
@@ -30,8 +31,8 @@ const HomePage = () => {
                             style={{
                                 margin: '10px',
                                 padding: '10px 20px',
-                                backgroundColor: '#ecb62c',
-                                color: '#3b4e56',
+                                backgroundColor: '#007bff',
+                                color: 'white',
                                 border: 'none',
                                 borderRadius: '5px',
                                 cursor: 'pointer',
@@ -44,7 +45,7 @@ const HomePage = () => {
                             style={{
                                 margin: '10px',
                                 padding: '10px 20px',
-                                backgroundColor: '#3b4e56',
+                                backgroundColor: '#28a745',
                                 color: 'white',
                                 border: 'none',
                                 borderRadius: '5px',
@@ -58,7 +59,7 @@ const HomePage = () => {
                 
                 {/* Right side: image (resize it properly) */}
                 <div>
-                    <img src={pic} alt="Project Management" style={{ maxWidth: '70%', height: 'auto', marginLeft:'50px', }} />
+                    <img src={pic} alt="Project Management" style={{ maxWidth: '100%', height: 'auto' }} />
                 </div>
             </div>
         </div>
